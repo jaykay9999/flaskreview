@@ -154,7 +154,7 @@ def test_disallow_string_for_allowed_methods(app):
 
 
 def test_url_mapping(app, client):
-    random_uuid4 = uuid.uuid4()
+    random_uuid4 = str(uuid.uuid4())
 
     def index():
         return flask.request.method
